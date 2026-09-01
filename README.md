@@ -1,26 +1,26 @@
 # Adventure Works | Power BI
 
-Projeto de Business Intelligence desenvolvido durante o curso **Microsoft Power BI Desktop for Business Intelligence**, da Maven Analytics.
+Projeto desenvolvido durante o curso **Microsoft Power BI Desktop for Business Intelligence**, da Maven Analytics.
 
-Neste projeto trabalhei com a base fictícia da Adventure Works, passando pelas principais etapas de construção de uma solução em Power BI: preparação dos dados, modelagem, criação de medidas em DAX e desenvolvimento do dashboard.
+A proposta foi trabalhar com a Adventure Works, uma empresa fictícia usada no curso, como se eu estivesse atuando como Analista de Business Intelligence. A partir dos arquivos brutos disponibilizados, passei pelo processo completo no Power BI: tratamento dos dados no Power Query, modelagem, criação de medidas em DAX e construção do dashboard.
 
-A proposta foi transformar os dados brutos disponibilizados no curso em uma estrutura de análise que permitisse acompanhar o desempenho da empresa e explorar informações relacionadas a vendas, produtos, clientes, devoluções, regiões e períodos.
+O resultado é um relatório que permite acompanhar vendas, receita, lucro, pedidos, devoluções, produtos, clientes, regiões e a evolução dos resultados ao longo do tempo.
 
 ---
 
 ## Contexto do projeto
 
-O projeto utiliza a Adventure Works como cenário de negócio para simular a atuação de um Analista de Business Intelligence.
+O projeto foi desenvolvido como parte prática do curso e usa a Adventure Works como cenário para aplicar os conteúdos aprendidos em uma situação próxima de um projeto de BI.
 
-O objetivo foi construir uma solução capaz de organizar diferentes fontes de dados e transformá-las em informações úteis para análise, aplicando em um único projeto os conhecimentos desenvolvidos ao longo do curso.
+O objetivo era sair dos arquivos brutos e chegar a um relatório interativo que ajudasse a acompanhar os principais indicadores da empresa, comparar resultados e aprofundar a análise de produtos, clientes e regiões.
 
-Por ser um projeto de estudo, ele não representa uma experiência profissional com a Adventure Works. O foco aqui é demonstrar a aplicação prática do processo de construção de uma solução em Power BI.
+Por ser um projeto de estudo, ele não representa uma experiência profissional com a Adventure Works. O foco aqui é mostrar o processo que desenvolvi dentro do Power BI e as habilidades que apliquei durante o projeto.
 
 ---
 
 ## Dados utilizados
 
-A base do projeto é formada por arquivos CSV disponibilizados para o exercício. Os arquivos utilizados no modelo estão organizados na pasta [`Dados`](./Dados/).
+Os dados foram disponibilizados em arquivos CSV e estão organizados na pasta [`Dados`](./Dados/).
 
 ### Tabelas de apoio
 
@@ -38,99 +38,125 @@ A base do projeto é formada por arquivos CSV disponibilizados para o exercício
 - Sales Data 2021
 - Sales Data 2022
 
-Os arquivos anuais de vendas foram tratados em conjunto para formar a base utilizada na análise de vendas.
+Os dados de vendas estavam separados por ano. No Power Query, os arquivos de 2020, 2021 e 2022 foram combinados para formar a consulta utilizada na análise de vendas.
 
 ---
 
-## Processo de desenvolvimento
+## Como o projeto foi desenvolvido
 
-### 1. Preparação dos dados — Power Query
+### 1. Power Query
 
-Os arquivos brutos foram importados e preparados no Power Query antes de serem utilizados no modelo.
+Comecei pela preparação dos dados no Power Query. Organizei as consultas, conferi e ajustei tipos de dados, tratei as tabelas e combinei os arquivos anuais de vendas.
 
-Nesta etapa foram aplicadas transformações como organização das consultas, ajuste dos tipos de dados, tratamento das tabelas e combinação dos arquivos anuais de vendas.
+Essa etapa deixou os dados prontos para serem relacionados e utilizados no modelo.
 
 ### 2. Modelagem de dados
 
-Após o tratamento, as tabelas foram organizadas em um modelo relacional para permitir que as diferentes áreas da análise trabalhassem de forma integrada.
+Depois do tratamento, organizei as tabelas em um modelo relacional.
 
-A modelagem conecta os dados de vendas e devoluções às informações de calendário, clientes, produtos e territórios.
+Os dados de vendas e devoluções foram conectados às tabelas de calendário, clientes, produtos, categorias e territórios, permitindo analisar os resultados por diferentes perspectivas sem precisar trabalhar cada arquivo de forma isolada.
 
-### 3. Medidas e cálculos — DAX
+### 3. DAX
 
-As métricas do relatório foram criadas com DAX para permitir análises dinâmicas conforme os filtros e seleções realizados no dashboard.
+Com o modelo pronto, criei as medidas utilizadas no relatório para que os indicadores respondessem aos filtros e às seleções feitas no dashboard.
 
-O projeto utiliza medidas para acompanhar indicadores de desempenho e comparar resultados em diferentes contextos do modelo.
+As medidas dão suporte a análises como receita, lucro, pedidos, devoluções, taxa de devolução, desempenho de produtos, resultados por cliente e comparações ao longo do tempo.
 
-### 4. Visualização
+### 4. Dashboard
 
-A etapa final foi a construção do relatório no Power BI, reunindo os principais indicadores e análises em uma interface interativa.
+Por último, organizei as análises em diferentes páginas do relatório.
 
-Os visuais foram organizados para facilitar a navegação e permitir que diferentes dimensões do negócio fossem exploradas através de filtros e interações entre os gráficos.
+A ideia foi deixar uma visão geral para acompanhamento dos principais indicadores e, a partir dela, permitir que a análise fosse aprofundada por região, produto e cliente.
 
 ---
 
-## O que o projeto permite analisar
+## Páginas e análises do relatório
 
-Entre as possibilidades de análise presentes no projeto estão:
+### Visão executiva
 
-- evolução das vendas ao longo do tempo;
+A página principal reúne os indicadores gerais da Adventure Works e permite acompanhar receita, lucro, quantidade de pedidos, taxa de devolução, evolução da receita, desempenho por categoria e produtos com maior volume de pedidos.
+
+### Mapa
+
+A análise geográfica permite comparar a distribuição dos resultados entre **Europa, América do Norte e Pacífico**, além de visualizar os países presentes na base.
+
+### Detalhes de produto
+
+A página de produtos permite selecionar um item específico e acompanhar pedidos, receita e lucro em relação às metas, além de analisar o histórico do produto e testar ajustes de preço.
+
+### Detalhes de cliente
+
+A análise de clientes mostra o total de clientes, receita por cliente, distribuição por faixa de renda e ocupação, ranking de clientes e destaque para o cliente com maior receita.
+
+### Recursos analíticos adicionais
+
+O relatório também utiliza recursos como **Decomposition Tree** e **Key Influencers** para explorar relações nos dados e aprofundar algumas análises além dos gráficos tradicionais.
+
+---
+
+## O que dá para analisar
+
+Com o relatório é possível explorar, entre outros pontos:
+
+- evolução das vendas e da receita ao longo do tempo;
+- lucro, pedidos e devoluções;
 - desempenho por região e território;
-- comportamento de produtos e categorias;
-- perfil e desempenho da base de clientes;
-- devoluções;
-- comparação entre diferentes períodos e segmentos.
+- categorias, subcategorias e produtos;
+- desempenho de produtos em relação às metas;
+- perfil e comportamento da base de clientes;
+- clientes com maior participação na receita;
+- diferenças entre períodos e segmentos.
 
 ---
 
-## Habilidades aplicadas
+## O que apliquei no projeto
 
 - Power BI Desktop
 - Power Query
+- Importação e tratamento de dados
+- Combinação de arquivos
 - Modelagem de dados
 - Relacionamentos entre tabelas
 - DAX
 - Criação de medidas
+- Parâmetros e análises de cenário
 - Visualização de dados
-- Construção de dashboards interativos
-- Organização de indicadores e informações para análise
+- Dashboards interativos
+- Decomposition Tree
+- Key Influencers
 
 ---
 
 ## Arquivos do projeto
 
-### Dashboard
-
-O arquivo final do Power BI está disponível em:
+O arquivo final do Power BI está em:
 
 [`Dashboard/Adventure Works - Maven Analytics.pbix`](./Dashboard/Adventure%20Works%20-%20Maven%20Analytics.pbix)
 
-### Dados
-
-Os arquivos utilizados no projeto estão disponíveis em:
+Os arquivos utilizados como fonte estão em:
 
 [`Dados/`](./Dados/)
 
-### Imagens
+Os prints utilizados na documentação ficam em:
 
-A pasta [`Imagens/`](./Imagens/) será utilizada para os prints do dashboard apresentados nesta documentação.
+[`Imagens/`](./Imagens/)
 
 ---
 
-## Como abrir
+## Como abrir o projeto
 
 1. Baixe o arquivo `.pbix` disponível na pasta `Dashboard`.
-2. Abra o arquivo utilizando o **Power BI Desktop**.
-3. O relatório pode ser visualizado normalmente com os dados já armazenados no arquivo.
+2. Abra o arquivo no **Power BI Desktop**.
+3. O relatório pode ser navegado normalmente com os dados já armazenados no arquivo.
 
-> **Observação:** as fontes do projeto foram originalmente configuradas a partir dos arquivos locais utilizados durante o curso. Caso seja necessário atualizar os dados após o download, pode ser necessário redefinir os caminhos das fontes no Power Query.
+> **Observação:** as fontes foram configuradas originalmente com arquivos locais usados durante o curso. Caso seja necessário atualizar os dados depois do download, pode ser necessário redefinir os caminhos das fontes no Power Query.
 
 ---
 
-## Sobre o projeto
-
-Este projeto faz parte do meu processo de formação em Análise de Dados e Business Intelligence e foi desenvolvido para praticar, em um cenário completo, o fluxo de trabalho utilizado na construção de relatórios no Power BI.
+## Sobre o curso
 
 **Curso:** Microsoft Power BI Desktop for Business Intelligence  
 **Plataforma:** Maven Analytics  
 **Ferramenta principal:** Microsoft Power BI Desktop
+
+Este projeto foi uma das etapas práticas da minha formação em análise de dados e serviu para aplicar, em um único trabalho, o fluxo completo de construção de um relatório no Power BI.

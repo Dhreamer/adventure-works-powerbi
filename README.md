@@ -50,15 +50,21 @@ Comecei pela preparação dos dados no Power Query. Organizei as consultas, conf
 
 Essa etapa deixou os dados prontos para serem relacionados e utilizados no modelo.
 
-![Tratamento dos dados no Power Query](./Imagens/08-power-query.webp)
-
 ### 2. Modelagem de dados
 
 Depois do tratamento, organizei as tabelas em um modelo relacional.
 
 Os dados de vendas e devoluções foram conectados às tabelas de calendário, clientes, produtos, categorias e territórios, permitindo analisar os resultados por diferentes perspectivas sem precisar trabalhar cada arquivo de forma isolada.
 
-![Modelo de dados do projeto](./Imagens/05-modelo-de-dados.webp)
+![Modelo de dados do projeto](./Imagens/Tela%20de%20Modelo%20de%20Dados.jpg)
+
+#### Visão do modelo — vendas
+
+![Modelo focado na tabela de vendas](./Imagens/Tabela%20de%20Vendas.jpg)
+
+#### Visão do modelo — retornos
+
+![Modelo focado na tabela de retornos](./Imagens/Tabela%20de%20Retornos.jpg)
 
 ### 3. DAX
 
@@ -80,37 +86,41 @@ A ideia foi deixar uma visão geral para acompanhamento dos principais indicador
 
 A página principal reúne os indicadores gerais da Adventure Works e permite acompanhar receita, lucro, quantidade de pedidos, taxa de devolução, evolução da receita, desempenho por categoria e produtos com maior volume de pedidos.
 
-![Visão executiva do dashboard](./Imagens/01-exec-dashboard.webp)
+![Visão executiva do dashboard](./Imagens/Tela%20Dashboard%20Executivo.jpg)
 
 ### Mapa
 
 A análise geográfica permite comparar a distribuição dos resultados entre **Europa, América do Norte e Pacífico**, além de visualizar os países presentes na base.
 
-![Análise geográfica](./Imagens/02-mapa.webp)
+![Análise geográfica](./Imagens/Tela%20de%20Mapa.jpg)
 
 ### Detalhes de produto
 
 A página de produtos permite selecionar um item específico e acompanhar pedidos, receita e lucro em relação às metas, além de analisar o histórico do produto e testar ajustes de preço.
 
-![Detalhes de produto](./Imagens/03-produtos.webp)
+![Detalhes de produto](./Imagens/Tela%20de%20Produtos.jpg)
 
 ### Detalhes de cliente
 
 A análise de clientes mostra o total de clientes, receita por cliente, distribuição por faixa de renda e ocupação, ranking de clientes e destaque para o cliente com maior receita.
 
-![Detalhes de cliente](./Imagens/04-clientes.webp)
+![Detalhes de cliente](./Imagens/Tela%20de%20Clientes.jpg)
 
 ### Recursos analíticos adicionais
 
-O relatório também utiliza recursos como **Decomposition Tree** e **Key Influencers** para explorar relações nos dados e aprofundar algumas análises além dos gráficos tradicionais.
+O relatório também utiliza recursos como **Decomposition Tree**, **Key Influencers** e páginas de dica de ferramenta para explorar relações nos dados e aprofundar algumas análises além dos gráficos tradicionais.
 
 #### Decomposition Tree
 
-![Decomposition Tree](./Imagens/06-decomposition-tree.webp)
+![Decomposition Tree](./Imagens/Tela%20de%20%C3%81rvore%20de%20Decomposi%C3%A7%C3%A3o.jpg)
 
 #### Key Influencers
 
-![Key Influencers](./Imagens/07-key-influencers.webp)
+![Key Influencers](./Imagens/Tela%20de%20Chaves.jpg)
+
+#### Dica de ferramenta
+
+![Página de dica de ferramenta](./Imagens/Tela%20de%20Dicas%20de%20Ferramenta.jpg)
 
 ---
 
